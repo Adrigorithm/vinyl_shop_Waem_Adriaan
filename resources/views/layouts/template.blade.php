@@ -24,5 +24,6 @@
     {{--  Footer  --}}
     @include('shared.footer')
     <script src="{{ mix('js/app.js') }}"></script>
+    @yield('script_after')
 </body>
 </html>

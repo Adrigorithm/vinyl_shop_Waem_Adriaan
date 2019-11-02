@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.35 on 2019-11-02 09:25:49.
+ * Generated for Laravel 5.8.35 on 2019-11-02 13:51:05.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14584,6 +14584,30 @@ namespace Illuminate\Support {
  
 }
 
+namespace Facades\App\Helpers { 
+
+    /**
+     * 
+     *
+     * @see \App\Helpers\Json
+     */ 
+    class Json {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function dump($data = null, $onlyInDebugMode = true)
+        {
+                        /** @var \App\Helpers\Json $instance */
+                        return $instance->dump($data, $onlyInDebugMode);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17377,6 +17401,8 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Json extends \Facades\App\Helpers\Json {}
  
 }
 
