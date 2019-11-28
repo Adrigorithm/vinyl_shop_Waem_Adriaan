@@ -37003,6 +37003,10 @@ $(function () {
   $('input[required], select[required], textarea[required]').each(function () {
     $(this).closest('.form-group').find('label').append('<sup class="text-danger mx-1">*</sup>');
   });
+  $('body').tooltip({
+    selector: '[data-toggle]="tooltip"]',
+    html: true
+  });
 });
 $(function () {
   $('nav i.fas').addClass('fa-fw mr-1');
