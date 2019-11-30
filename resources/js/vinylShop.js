@@ -1,3 +1,9 @@
+Noty.overrideDefaults({
+    layout: 'topRight',
+    theme: 'bootstrap-v4',
+    timeout: 3000
+});
+
 export function hello(){
     console.log('The Vinyl Shop JavaScript works! 🙂');
 }
@@ -18,7 +24,7 @@ $(function(){
             .append('<sup class="text-danger mx-1">*</sup>');
     });
     $('body').tooltip({
-        selector: '[data-toggle]="tooltip"]',
+        selector: '[data-toggle="tooltip"]',
         html: true
     })
 });
