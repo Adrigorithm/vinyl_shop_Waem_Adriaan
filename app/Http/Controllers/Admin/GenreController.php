@@ -105,7 +105,7 @@ class GenreController extends Controller
         $genre->delete();
         return response()->json([
             'type' => 'success',
-            'text' => 'The genre <b>$genre->name</b> has been deleted'
+            'text' => "The genre <b>$genre->name</b> has been deleted"
         ]);
     }
 

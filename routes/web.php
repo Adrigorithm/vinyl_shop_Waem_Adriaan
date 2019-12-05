@@ -22,7 +22,7 @@ Route::post('contact-us', 'ContactUsController@sendEmail');
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function(){
     Route::redirect('/', 'records');
     Route::get('genres/qryGenres', 'Admin\GenreController@qryGenres');
-    Route::get('records', 'Admin\RecordController@index');
+    Route::resource('records', 'Admin\RecordController');
     Route::resource('genres', 'Admin\GenreController');
 });
 Route::redirect('user', '/user/profile');
