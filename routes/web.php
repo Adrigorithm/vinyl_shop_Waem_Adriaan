@@ -22,8 +22,10 @@ Route::post('contact-us', 'ContactUsController@sendEmail');
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function(){
     Route::redirect('/', 'records');
     Route::get('genres/qryGenres', 'Admin\GenreController@qryGenres');
+    Route::get('users/qryUsers/{nameemail}/{userVar}/{ascdesc}', 'Admin\UserController@qryUsers');
     Route::resource('records', 'Admin\RecordController');
     Route::resource('genres', 'Admin\GenreController');
+    Route::resource('users', 'Admin\UserController');
 });
 Route::redirect('user', '/user/profile');
 Route::middleware(['auth'])->prefix('user')->group(function (){
